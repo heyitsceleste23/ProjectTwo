@@ -91,5 +91,7 @@ a:visited {
 .hover-text:hover {
     font-family: "La Belle Aurore", cursive;
     color: #0a1938;
-    transform: scale(5); 
+    transition: 1s;
+    transform: skew(13deg);
+
 }
