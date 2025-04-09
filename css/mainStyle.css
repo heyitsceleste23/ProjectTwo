@@ -1,66 +1,35 @@
 * {
-    margin: 5%;
-    padding: 5%;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
     font-family: "Shadows Into Light", cursive;
     text-decoration: none;
     color: #4f6688;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    padding-left: 10%;
-    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    text-align: center;
     background-color: #9fa8b1;
+    margin-top: 20px;
+    padding: 10%;
 }
 
-.custom-font {
-    font-family: "Shadows Into Light", cursive;
-    cursor: pointer;
-    font-weight: 400;
-    font-style: normal;
-    color: #4f6688;
+p {
+    margin-bottom: 10px;
 }
 
-.hover-text {
+.custom-font, .hover-text {
     font-family: "Shadows Into Light", cursive;
-    font-weight: 400;
-    font-style: normal;
-    text-decoration: none;
     color: #4f6688;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, skew 0.3s ease-in-out;
 }
 
 .hover-text:hover {
     font-family: "La Belle Aurore", cursive;
-    font-weight: 400;
-    font-style: normal;
     color: #0a1938;
-    text-decoration: none;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-up {
-    opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
-}
-
-a {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-a:visited {
-    color: inherit; 
+    transform: scale(1.1) skew(10deg);
 }
 
 @keyframes fadeUp {
@@ -70,7 +39,7 @@ a:visited {
     }
     to {
         opacity: 1;
-        transform: translateY(0) scale(1); 
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -79,19 +48,32 @@ a:visited {
     animation: fadeUp 1s ease-out forwards;
 }
 
-.hover-text {
-    font-family: "Shadows Into Light", cursive;
-    font-weight: 400;
-    font-style: normal;
+a {
     text-decoration: none;
-    color: #4f6688;
-    transition: transform 0.8s ease, font-family 0.8s ease; 
+    color: inherit;
 }
 
-.hover-text:hover {
-    font-family: "La Belle Aurore", cursive;
-    color: #0a1938;
-    transition: 1s;
-    transform: skew(13deg);
+a:visited {
+    color: inherit;
+}
 
+#fadeIn1, #fadeIn2, #fadeIn3 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+#fadeIn2 {
+    animation-delay: 1s;
+}
+
+#fadeIn3 {
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
