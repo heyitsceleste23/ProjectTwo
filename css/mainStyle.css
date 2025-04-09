@@ -14,7 +14,6 @@ body {
     background-color: #9fa8b1;
 }
 
-/* My heart, your heart */
 .custom-font {
     font-family: "Shadows Into Light", cursive;
     cursor: pointer;
@@ -23,7 +22,6 @@ body {
     color: #4f6688;
 }
 
-/* Default text style */
 .hover-text {
     font-family: "Shadows Into Light", cursive;
     font-weight: 400;
@@ -32,7 +30,6 @@ body {
     color: #4f6688;
 }
 
-/* Change font on hover */
 .hover-text:hover {
     font-family: "La Belle Aurore", cursive;
     font-weight: 400;
@@ -64,4 +61,35 @@ a {
 
 a:visited {
     color: inherit; 
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1); 
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.hover-text {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #4f6688;
+    transition: transform 0.8s ease, font-family 0.8s ease; 
+}
+
+.hover-text:hover {
+    font-family: "La Belle Aurore", cursive;
+    color: #0a1938;
+    transform: scale(5); 
 }
