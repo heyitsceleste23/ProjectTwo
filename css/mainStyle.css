@@ -11,11 +11,15 @@
 
 body {
     font-size: 25px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
     background-color: #9fa8b1;
-    margin-top: 20px;
-    padding: 10%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
 }
 
 p {
@@ -25,13 +29,13 @@ p {
 .custom-font, .hover-text {
     font-family: "Shadows Into Light", cursive;
     color: #4f6688;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, skew 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, skew 0.3s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 .hover-text:hover {
     font-family: "La Belle Aurore", cursive;
     color: #0a1938;
-    transform: scale(1.1) skew(10deg);
+    transform: scale(10) skew(-45deg);
 }
 
 @keyframes fadeUp {
@@ -47,35 +51,10 @@ p {
 
 .fade-up {
     opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
+    animation: fadeUp 2.5s ease-out forwards;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-}
-
-a:visited {
-    color: inherit;
-}
-
-#fadeIn1, #fadeIn2, #fadeIn3 {
-    animation: fadeIn 2s ease-in-out;
-}
-
-#fadeIn2 {
-    animation-delay: 1s;
-}
-
-#fadeIn3 {
-    animation-delay: 2s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
